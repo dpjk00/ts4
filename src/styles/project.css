@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button {
+  background: crimson;
+}
+
+.edit-field {
+  width: 30%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid white;
+  top: 200px;
+  color: white;
+  left: 35%;
+  padding: 5% 0;
+  gap: 15px;
+}
+
+.main-div-sub {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-item {
+  border: 3px solid white;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  
+  input {
+    height: 30px;
+  }
+}
