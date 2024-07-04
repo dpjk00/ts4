@@ -3,6 +3,7 @@ import { User, UserRole } from '../models/User';
 class UserService {
 
     private localStorageKey = "users"
+    private activeUser = "activeuser"
 
     private users: User[] = [
       new User(1, 'admin', 'admin', UserRole.ADMIN),
@@ -30,6 +31,10 @@ class UserService {
 
     get_user_by_name(username: string): User | undefined {
       return this.users.find(user => user.username === username);
+    }
+
+    get_user(id: number): User | undefined {
+      return this.users.find(user => user.id === id);
     }
 
     get_users_no_admin(): User[] {
