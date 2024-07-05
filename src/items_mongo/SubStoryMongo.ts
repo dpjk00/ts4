@@ -12,13 +12,22 @@ export enum StateMongo {
   DONE = 'DONE'
 }
 
-export interface StoryMongo {
+export enum TimeMongo {
+  THREE = '3h',
+  FIVE = '5h',
+  EIGHT = '8h'
+}
+
+export interface SubStoryMongo {
   id: string;
   name: string;
   description: string;
   priority: PriorityMongo;
-  project: string;
-  created: number;
+  story: string;
+  expected_time: TimeMongo;
   state: StateMongo;
+  created: number;
+  start: number;
+  end: number;
   owner: number;
 }

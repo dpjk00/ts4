@@ -29,6 +29,8 @@
     "mysql2": "^3.10.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "rxjs": "^7.8.1",
     "sequelize": "^6.37.3",
     "util": "^0.12.5",
     "util.promisify": "^1.1.2"

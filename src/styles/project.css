@@ -25,7 +25,7 @@
   width: 100%;
   min-height: 130vh;
   position: absolute;
-  top: 0;
+  top: 10vh;
   left: 0;
   display: flex;
   align-items: center;

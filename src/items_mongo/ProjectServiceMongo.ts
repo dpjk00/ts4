@@ -9,7 +9,7 @@ class ProjectServiceMongo {
 
   private activeProjectKey = 'active';
 
-    constructor() {
+  constructor() {
     const uri = "mongodb+srv://msn:Damianowo2@projekt.emn7xmh.mongodb.net/?retryWrites=true&w=majority&appName=Projekt";
     this.client = new MongoClient(uri, {
       serverApi: { version: '1', strict: true, deprecationErrors: true }
@@ -77,12 +77,13 @@ class ProjectServiceMongo {
         { returnDocument: 'after' }
       );
   
-      return result.value ? this.doc_to_project(result.value) : null;
+      return result ? this.doc_to_project(result) : null;
     } catch (error) {
       console.error('Error in update_project:', error);
       return null;
     }
   }
+  
   async delete_project(id: string): Promise<boolean> {
     const collection = await this.get_collection();
 

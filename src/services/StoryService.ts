@@ -61,8 +61,8 @@ class StoryService {
   }
 
    convert_num_to_string(num: number) : string {
-    const date = new Date(num);
-    return date.toUTCString()
+    const date = new Date(num).toLocaleString('pl-PL').toString()
+    return date;
   }
 }
 
